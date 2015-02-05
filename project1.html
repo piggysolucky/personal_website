@@ -1,0 +1,105 @@
+<<!DOCTYPE html>
+<html>
+<head>
+	<title>PROJECTS</title>
+	<link rel="stylesheet" type="text/css" href="styles/main.css">	
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+</head>
+<!--head and the navitation-->
+<header>
+	<h1>Rui Yan's Little Code Bar</h1>
+<nav>
+
+		<ul>
+			<li><a href="index.html"><h3>Basic Information</h3></a></li>
+			<li><a href="project1.html"><h3>Project</h3></a></li>
+			<li><a href="hobbies.html"><h3>Hobbies</h3></a></li>
+			<li><a href="desJob.html"><h3>Desired Job</h3></a></li>
+		</ul>
+	</nav>
+</header>
+<div class="container">
+	<div class="col2">
+	<div class="panel panel-default">
+	    <div class="panel-heading"><strong><font face="cursive"><h3>Thanks for your time to take a look at my projects!</h3></font></strong></div>
+		  <div class="panel-body">
+	      <!--The navigation to the projects-->
+	      <ul>
+	      	<li class="no-style"><a href="#res">Buckeye Restaurant Simulation </a><strong>(Java, process synchronization, resource management)</strong></li>
+	      	<li class="no-style"><a href="#shell">UNIX SHELL Interface Creation</a><strong>(UNIX, C, shell, process)</strong></li>
+	      	<li class="no-style"><a href="#procon">Producer Consumer Simulation</a><strong>(C, process synchronization, mutual exclusion)</strong></li>
+	      	<li class="no-style"><a href="#matrix">Matrix Multiplication with Multiple Threads</a><strong>(C, threads, CPU)</strong></li>
+	      </ul>
+	      <!--The following div is the detailed description of the projects-->
+	       <div>
+	       	<h4><a name="res">
+	       		<strong>
+	       			<font face="cursive">Buckeye Restaurant Simulation</font>
+	       		</strong></a>
+	       	</h4>
+	       	<img src="pics/restaurant.jpg" width="150px" height="200px"><br/>
+             In this project, I write a simulation of a restaurant.The simulation has four sets of
+			parameters - the number of eaters (diners) that wish to enter the restaurant, the times they
+			approach the restaurant and what they order, the number of tables in the restaurant (there
+			can only be as many eaters as there are tables at a time; other eaters must wait for a free
+			table before placing their order), and the number of cooks in the kitchen that process orders.<br/>
+			Eaters in the restaurant place their orders when they get seated. These orders are then handled
+			by available cooks. Each cook handles one order at a time. A cook handles an order by using
+			machines to cook the food items. To simplify the simulation, we make the following
+			assumptions. There are only three types of food served by the restaurant - a Buckeye Burger,
+			Brutus Fries, and Coke. Each person entering the restaurant occupies one table and orders one
+			or more burgers, zero or more orders of fries, and zero or one glass of coke. The cook needs to
+			use the burger machine for 5 minutes to prepare each burger, fries machine for 3 minutes for
+			one order of fries, and the soda machine for 1 minute to fill a glass with coke. The cook can use
+			at most one of these three machines at any given time. There is only one machine of each type
+			in the restaurant (so, for example, over a 5-minute duration, only one burger can be prepared).
+			Once the food (all items at the same time) are brought to a diner's table, they take exactly 30
+			minutes to finish eating them, and then leave the restaurant, making the table available for
+			another diner (immediately). <br/>
+			<strong>Input:</strong>Diners arrive at the restaurant over a 120 minute duration, which is taken as input by
+			the simulation. If there are N diners arriving, the input has N+3 lines, specifying, in order:
+			number of diners (N), number of tables, number of cooks, and N other lines each with the
+			following four numbers: a number between 0 and 120 stating when the diner arrived (this
+			number is increasing across lines), the number of burgers ordered (1 or higher), number of
+			order of fries (0 or higher), and whether or not coke was ordered (0 or 1).<br/>
+            <strong>Implementation:</strong> I create one thread for each arriving diner, which
+			will then compete for an available table. There will also be one thread for each cook, all of them
+			active for the entire duration when the restaurant is open. Tables and machines for cooking the
+			food are resources whose use must be coordinated among the threads.
+			<h4><a name="shell">
+	       		<strong>
+	       			<font face="cursive">UNIX SHELL Interface Creation</font>
+	       		</strong></a>
+	       	</h4>
+	       	<img src="pics/unix.jpg" width="200" height="200" align="right">
+	       	In this project, I designed a shell interface that accepts user commands and then executes each command in a separate process. A shell interface provides the user a prompt after which the next command is entered.<br/>
+	       	Then I add a history feature into my UNIX Shell which will allow users to access up to fifteen most recently entered commands. These commands will be numbered starting at 1 and will continue to grow larger even past 15, e.g. if the user has entered 35 commands, the fifteen most recent commands should be numbered 21-35. The history commands will also be saved to a file when the shell is exited and input from the file the next time the shell is started.
+	       	<h4><a name="procon">
+	       		<strong>
+	       			<font face="cursive">Producer Consumer Simulation</font>
+	       		</strong></a>
+	       	</h4>
+	       	In this project, I design a programming solution to the bounded-buffer producer and consumer problem. The producer and consumer - running as separate threads - will move items to and from a buffer that is synchronized with <i>empty, full, and mutex </i>structures.
+	       	<h4><a name="matrix">
+	       		<strong>
+	       			<font face="cursive">Matrix Multiplication with Multiple Threads</font>
+	       		</strong></a>
+	       	</h4>
+	       	In this project, I design programming solutions for matrix multiplication that take advantage of multiple threads executing in parallel.
+	       </div>
+	  </div>
+	</div>
+</div>
+</div>
+<body>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+<footer>Designed and built by Rui.. <br/> Copyright: 2014 Rui Yan organization.</footer>
+
+</body>
+</html>
